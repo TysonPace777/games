@@ -7,7 +7,7 @@ export default function Home() {
     <div>
       <h1 className={styles.h1}>Games</h1>
       <div className={styles.container}>
-        <Link href="/slope"><Image src="/slope.webp" alt="logo" width={200} height={200}></Image></Link>
+        <Link href="/slope"><Image src="/slope.webp" alt="logo" width={200} height={200} className={styles.image}></Image></Link>
       </div>
     </div>
   );
