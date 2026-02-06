@@ -10,4 +10,14 @@
     justify-self: center;
     border: 1px lightgray solid;
     padding: 15px;
+    border-radius: 5px;
+}
+
+.image {
+    border-radius: 20px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
 }

@@ -11,6 +11,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>T Gamess</title>
+        <meta name="description" content="Games Website Project" />
       </head>
       <body>
       <Header/>
