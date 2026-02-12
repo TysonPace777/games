@@ -1,0 +1,9 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 70%;
+    justify-self: center;
+    border: 1px lightgray solid;
+    padding: 15px;
+    border-radius: 5px;
+}
