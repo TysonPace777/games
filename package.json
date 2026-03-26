@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "postinstall": "cp node_modules/stockfish/stockfish-18.js public/stockfish/stockfish-18.js && cp node_modules/stockfish/stockfish-18.wasm public/stockfish/stockfish-18.wasm"
   },
   "dependencies": {
     "chess.js": "^1.4.0",
