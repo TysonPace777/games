@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import CopyPlugin from "copy-webpack-plugin";
 
 const nextConfig: NextConfig = {
   allowedDevOrigins: ["*"],
@@ -12,6 +13,17 @@ const nextConfig: NextConfig = {
         ],
       },
     ];
+  },
+  webpack(config) {
+    config.plugins.push(
+      new CopyPlugin({
+        patterns: [
+          { from: 'node_modules/stockfish/stockfish-18.js', to: '../public/stockfish/stockfish-18.js' },
+          { from: 'node_modules/stockfish/stockfish-18.wasm', to: '../public/stockfish/stockfish-18.wasm' },
+        ],
+      })
+    );
+    return config;
   },
 };
 

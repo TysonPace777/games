@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "postinstall": "cp node_modules/stockfish/stockfish-18.js public/stockfish/stockfish-18.js && cp node_modules/stockfish/stockfish-18.wasm public/stockfish/stockfish-18.wasm"
+    "lint": "eslint"
   },
   "dependencies": {
     "chess.js": "^1.4.0",
@@ -23,6 +22,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "copy-webpack-plugin": "^14.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
