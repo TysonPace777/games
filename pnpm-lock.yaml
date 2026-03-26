@@ -23,6 +23,9 @@ importers:
       react-dom:
         specifier: 19.2.3
         version: 19.2.3(react@19.2.3)
+      stockfish:
+        specifier: ^18.0.5
+        version: 18.0.5
       stockfish.wasm:
         specifier: ^0.10.0
         version: 0.10.0
@@ -1792,6 +1795,10 @@ packages:
 
   stockfish.wasm@0.10.0:
     resolution: {integrity: sha512-OTvOlz0ijCSmIb/YvOZ1Dn6vwZVS4Ge3N+RcV0d2b6LXUtCJ9UwmBHypRW3DZ+VXf8WNm7E3P+6jMTVvb3QaBg==}
+
+  stockfish@18.0.5:
+    resolution: {integrity: sha512-2A8mrlrYT8ovf4y8GIrmzOQZCC2kf01hPeM4xrVZdBeFC/LoZj+MgYLyrwdKXDQWubx1RCiKU9dFDGeDutuT3A==}
+    hasBin: true
 
   stop-iteration-iterator@1.1.0:
     resolution: {integrity: sha512-eLoXW/DHyl62zxY4SCaIgnRhuMr6ri4juEYARS8E6sCEqzKpOiE521Ucofdx+KnDZl5xmvGYaaKCk5FEOxJCoQ==}
@@ -3881,6 +3888,8 @@ snapshots:
   stable-hash@0.0.5: {}
 
   stockfish.wasm@0.10.0: {}
+
+  stockfish@18.0.5: {}
 
   stop-iteration-iterator@1.1.0:
     dependencies:
