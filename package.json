@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "postinstall": "node -e \"const fs=require('fs');fs.mkdirSync('public/stockfish',{recursive:true});fs.copyFileSync('node_modules/stockfish/stockfish-18.js','public/stockfish/stockfish-18.js');fs.copyFileSync('node_modules/stockfish/stockfish-18.wasm','public/stockfish/stockfish-18.wasm');\""
   },
   "dependencies": {
     "chess.js": "^1.4.0",
@@ -27,5 +28,8 @@
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["stockfish"]
   }
 }
