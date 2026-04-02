@@ -112,14 +112,26 @@ export default function ChessPage() {
     setPendingPromotion(null);
   }
 
+  let status = "";
+
+  if (game.isCheckmate()) {
+    status = `Checkmate! ${game.turn() === 'w' ? 'Black' : 'White'} wins`;
+  } else if (game.isStalemate()) {
+    status = "Stalemate!";
+  } else if (game.isDraw()) {
+    status = "Draw!";
+  } else if (game.isCheck()) {
+    status = "Check!";
+  }
+
   return (
     <div style={{ width: '400px', margin: '40px auto', textAlign: 'center', position: 'relative' }}>
 
       <h1 className={styles.h1}>Chess Game</h1>
 
       <div style={{ marginBottom: '20px' }}>
-        <label>Difficulty: </label>
-        <select value={difficulty} onChange={(e) => setDifficulty(Number(e.target.value))}>
+        <label className={styles.label}>Difficulty: </label>
+        <select value={difficulty} onChange={(e) => setDifficulty(Number(e.target.value))} className={styles.select}>
           <option value={5}>Easy</option>
           <option value={10}>Medium</option>
           <option value={15}>Hard</option>
@@ -215,6 +227,19 @@ export default function ChessPage() {
           </div>
         </div>
       )}
+
+      <div
+        className={styles.status}
+        style={{
+          color: game.isCheckmate()
+            ? '#ef4444'
+            : game.isCheck()
+            ? '#f472b6'
+            : '#e5e7eb',
+        }}
+      >
+        {status}
+      </div>
 
       <Chessboard
         position={game.fen()}
